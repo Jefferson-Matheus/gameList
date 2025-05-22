@@ -1,6 +1,7 @@
 package com.matheusferreira.dbList.dto;
 
 import com.matheusferreira.dbList.entities.Game;
+import com.matheusferreira.dbList.projections.GameMinProjection;
 
 public class GameMinDto {
 
@@ -19,6 +20,14 @@ public class GameMinDto {
         this.year = gameEntity.getYear();
         this.imgUrl = gameEntity.getImgUrl();
         this.shortDescription = gameEntity.getShortDescription();
+    }
+
+    public GameMinDto(GameMinProjection gameMinProjection) {
+        this.id = gameMinProjection.getId();
+        this.title = gameMinProjection.getTitle();
+        this.year = gameMinProjection.getYear();
+        this.imgUrl = gameMinProjection.getImgUrl();
+        this.shortDescription = gameMinProjection.getShortDescription();
     }
 
     public Long getId() {
