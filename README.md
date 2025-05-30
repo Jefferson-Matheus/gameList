@@ -86,10 +86,11 @@ docker-compose up -d
 
 ---
 
-#Instalação
+# Instalação
 
 1. Clone O Repositorio
 
    ```bash
-    
+    https://github.com/Jefferson-Matheus/gameList.git
    ```
+2. Abra-o Na Sua IDE De Preferência E Rode O Projeto
