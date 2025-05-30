@@ -86,11 +86,49 @@ docker-compose up -d
 
 ---
 
-# Instalação
+## ⚙️ Instalação
 
-1. Clone O Repositorio
+### 1. Clone o repositório
 
-   ```bash
-    https://github.com/Jefferson-Matheus/gameList.git
+```bash
+git clone https://github.com/Jefferson-Matheus/gameList.git://github.com/Jefferson-Matheus/gameList.git
    ```
-2. Abra-o Na Sua IDE De Preferência E Rode O Projeto
+### 2. Abra na sua IDE de preferência
+
+Pode ser IntelliJ IDEA, VS Code, Eclipse ou outra de sua escolha.
+
+---
+
+## 🔁 Perfis de Ambiente
+
+Este projeto permite execução em diferentes perfis: `test`, `dev` e `prod`.  
+A configuração do perfil pode ser feita no arquivo `application.properties`:
+
+```properties
+spring.application.name=gameList
+spring.profiles.active=${APP_PROFILE:test}
+spring.jpa.open-in-view=false
+
+cors.origins=${CORS_ORIGINS:http://localhost:5173,http://localhost:3000}
+```
+
+---
+
+## 📡 Endpoints da API
+
+### 🎮 Jogos (`/games`)
+
+| Método | Endpoint            | Descrição                            |
+|--------|---------------------|--------------------------------------|
+| GET    | `/games`            | Retorna todos os jogos               |
+| GET    | `/games/{id}`       | Retorna os detalhes de um jogo por ID |
+
+---
+
+### 🗂️ Listas de Categorias (`/lists`)
+
+| Método | Endpoint                        | Descrição                                                |
+|--------|----------------------------------|----------------------------------------------------------|
+| GET    | `/lists`                        | Retorna todas as listas de categorias                    |
+| GET    | `/lists/{listId}/games`         | Retorna os jogos associados a uma determinada lista      |
+| POST   | `/lists/{listId}/replacement`   | Reposiciona a ordem dos jogos de uma lista específica    |
