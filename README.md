@@ -132,3 +132,16 @@ cors.origins=${CORS_ORIGINS:http://localhost:5173,http://localhost:3000}
 | GET    | `/lists`                        | Retorna todas as listas de categorias                    |
 | GET    | `/lists/{listId}/games`         | Retorna os jogos associados a uma determinada lista      |
 | POST   | `/lists/{listId}/replacement`   | Reposiciona a ordem dos jogos de uma lista específica    |
+
+---
+
+## 🛠️ Melhorias Futuras
+
+Abaixo estão algumas melhorias planejadas para as próximas versões do projeto:
+
+- ✅ **Documentação Swagger**  
+  Gerar uma interface interativa para testar os endpoints diretamente pelo navegador.
+
+- 🚀 **Deploy na Nuvem**  
+  Subir o projeto em plataformas como Render, Railway, ou Heroku para facilitar o acesso externo à API.
+
