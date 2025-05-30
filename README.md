@@ -1,32 +1,47 @@
-# GamesList REST API
+# 🎮 GamesList REST API
 
-API Construida Com Java E Spring Boot Para Listagem De Jogos. As Funcionalidades Incluem:
+API REST construída com **Java** e **Spring Boot** para gerenciamento de uma lista de jogos. Este projeto foi desenvolvido como parte do aprendizado no **Intensivão Java Spring** do professor [Nélio Alves](https://github.com/nelioalves).
 
-1. Listar Categorias De Jogos
-2. Listar Jogos Com Base Na Categoria
-3. Listar Todos Os Jogos
-4. Reposicionar Jogos De Uma Determinada Categoira
+---
 
-Projeto Feito Para Aprendizando Durante O Intensivão Java Spring Do professor Nélio Alves.
+## ✨ Funcionalidades
 
-# Tecnologias Utilizadas
+- 🔹 Listar todas as categorias de jogos.
+- 🔹 Listar jogos com base em uma categoria.
+- 🔹 Listar todos os jogos.
+- 🔹 Reposicionar (ordenar) os jogos de uma determinada categoria.
 
-1. Java 21
-2. Spring Boot 3.4.5
-3. Spring JPA
-4. Spring Web
-5. H2
-6. PostgreSQL
+---
 
+## 🚀 Tecnologias Utilizadas
 
-É Possivel Testar A API Com Um Banco De Dados PosgreSQL Instaldo Na Maquina Ou Via Docker Compose com um Aquivo .yml
+- **Java 21**
+- **Spring Boot 3.4.5**
+- **Spring Web**
+- **Spring Data JPA**
+- **H2 Database** (ambiente de desenvolvimento)
+- **PostgreSQL** (produção/testes)
+- **Docker Compose** (para facilitar a configuração do ambiente)
 
-```bash
-  version: "3.7"
+---
+
+## 🧪 Como Executar o Projeto
+
+### ✅ Pré-requisitos
+
+- Java 21+
+- Maven
+- Docker (opcional)
+- PostgreSQL (local ou via container)
+
+### 🔄 Rodando com Docker Compose
+
+Você pode levantar o banco PostgreSQL e o PGAdmin usando o seguinte arquivo `docker-compose.yml`:
+
+```yaml
+version: "3.7"
+
 services:
-  # ====================================================================================================================
-  # POSTGRES SERVER
-  # ====================================================================================================================
   pg-docker:
     image: postgres:14-alpine
     container_name: dev-postgresql
@@ -39,9 +54,7 @@ services:
       - ./.data/postgresql/data:/var/lib/postgresql/data
     networks:
       - dev-network
-  # ====================================================================================================================
-  # PGADMIN
-  # ====================================================================================================================
+
   pgadmin-docker:
     image: dpage/pgadmin4
     container_name: dev-pgadmin
@@ -56,24 +69,27 @@ services:
       - pg-docker
     networks:
       - dev-network
-# ======================================================================================================================
-# REDE
-# ======================================================================================================================
+
 networks:
   dev-network:
     driver: bridge
-    
-    
----
 
-# ======================================================================================================================
-# VOLUMES NOMEADOS
-# ======================================================================================================================
 volumes:
   pg_data:
   pgadmin_data:
 ```
+Para Subir Os Conteiner Use:
 
-# Futuras Implementações
-- Documentação Swagger
-- Deploy
+```bash
+docker-compose up -d
+```
+
+---
+
+#Instalação
+
+1. Clone O Repositorio
+
+   ```bash
+    
+   ```
