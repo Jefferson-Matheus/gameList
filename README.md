@@ -73,3 +73,7 @@ volumes:
   pg_data:
   pgadmin_data:
 ```
+
+# Futuras Implementações
+- Documentação Swagger
+- Deploy
